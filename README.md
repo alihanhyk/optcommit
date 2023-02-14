@@ -1,7 +1,7 @@
 # When to Make and Break Commitments?
 Code author: Alihan Hüyük ([ah2075@cam.ac.uk](mailto:ah2075@cam.ac.uk))
 
-This repository is for replicating the main experimental results in the ICLR 2023 paper ''when to make and break commitments?'' The method we propose, *Bayes-OCP* is implemented as function `policy_bayesocp` in `src/algs.py`.
+This repository is for reproducing the main experimental results in the ICLR'23 paper "When to make and break commitments?" The method we propose, *Bayes-OCP*, is implemented as the function `policy_bayesocp` in `src/algs.py`.
 
 ### Usage
 

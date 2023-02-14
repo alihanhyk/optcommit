@@ -1,0 +1,5 @@
+dill
+jax==0.3.8
+jaxlib==0.3.7
+tabulate
+tqdm

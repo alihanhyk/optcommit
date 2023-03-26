@@ -1,0 +1,11 @@
+[tool.black]
+line-length = 120
+target-version = ['py37', 'py38', 'py39', 'py310']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+src_paths = ["src"]
+
+[tool.bandit]
+exclude_dirs = ["tests"]

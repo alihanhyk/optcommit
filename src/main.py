@@ -1,4 +1,5 @@
 # pylint: disable=redefined-outer-name
+# pyright: reportGeneralTypeIssues=false
 
 import dill
 import jax

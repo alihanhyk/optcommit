@@ -1,10 +1,18 @@
 # pyright: reportGeneralTypeIssues=false
 
+import pickle
+
 import dill
 import jax
 import jax.numpy as np
 import tqdm
+from jax.scipy.stats import norm  # noqa: F401  # pylint: disable=unused-import
 from tabulate import tabulate
+
+# NOTE: `from jax.scipy.stats import norm` here is necessary as JAX (at least some versions of) seems to captures
+# the scope of the executing file (in this case `python eval.py`), and then has trouble recognizing
+# `from jax.scipy.stats import norm` in other files (in this case `main.py`). Hence, we import norm here and suppress
+# linter warnings for unused import.
 
 jax.config.update("jax_platform_name", "cpu")
 
@@ -154,4 +162,11 @@ headers = [
     for met in key_mets
 ]
 
+with open("res_raw.pkl", "wb") as f:
+    pickle.dump(values, f)
+
+print("Raw values:")
+print(values)
+
+print("\nTable:")
 print(tabulate(values, headers=headers))

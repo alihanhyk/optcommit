@@ -1,5 +1,7 @@
 dill
-jax==0.3.8
-jaxlib==0.3.7
+jax >=0.3.8, <1
+jaxlib >=0.3.7, <1
+numpy
+scipy
 tabulate
 tqdm

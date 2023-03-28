@@ -2,6 +2,9 @@
 res/*
 !res/.keep
 res.txt
+res.pkl
+log.txt
+res*.pkl
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
